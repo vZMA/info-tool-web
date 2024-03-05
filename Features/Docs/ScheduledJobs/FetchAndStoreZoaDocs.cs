@@ -35,8 +35,7 @@ public class FetchAndStoreZmaDocs(ILogger<FetchAndStoreZmaDocs> logger, IHttpCli
         {
             foreach (var doc in category.Documents)
             {
-                var rpdfName = GetPdfNameFromUrl(doc.Url);
-                var pdfName = Uri.EscapeDAtaString(pdfName);
+                var pdfName = GetPdfNameFromUrl(doc.Url);
                 var localPdfPath = Path.ChangeExtension(Path.Combine(PdfFolderPath, pdfName), ".pdf");
                 if (!File.Exists(localPdfPath))
                 {

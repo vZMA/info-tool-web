@@ -1,0 +1,31 @@
+[
+{"name":"ZMA ARTCC Policy","files":[
+{"name":"D1 - ZMA ARTCC SOP Document","details":"General policies and procedures for the ZMA ARTCC","updated_at":"2-Oct-23","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1696282502629-ZMA%20D1%20-%20vZMA%20ARTCC%20SOP.pdf"},
+{"name":"D12 - Flight Strip Handling","details":"Instructions for strip handling in CRC","updated_at":"10-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1695055730731-ZMA%20D12%20-%20Flight%20Strip%20Handling.pdf"},
+{"name":"N1 - Solo Certifications","details":"Training department Solo Certifications policy","updated_at":"31-Jan-2024","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694106634419-ZMA%20N1%20-%20Solo%20Certifications.pdf"},
+{"name":"N2 - Cancellation of Climb via SSID","details":"Training department Cancellation of Climb via SID note","updated_at":"31-Jan-2024","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694106612924-ZMA%20N2%20-%20Cancellation%20of%20Climb%20via%20SID.pdf"},
+{"name":"GCAP - Rating Flow","details":"Training department Rating Flow Process for Home Controllers","updated_at":"","url":"https://docs.google.com/document/d/1U717_AoxZC4Z2-la4DcCge7cnuHrrlK_X2Lnsar8msc"}
+]},
+
+{"name":"Miami Center - Standard Operating Procedures","files":[
+{"name":"D2 - Miami Center SOP","details":"Miam Center","updated_at":"27-Feb-2024","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1709076879114-ZMA%20D2%20-%20Miami%20Center%20SOP.pdf"}
+]},
+
+{"name":"TRACON","files":[
+{"name":"D3 - Miami ATCT","details":"Miami Tracon SOP","updated_at":"8-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694104699142-ZMA%20D3%20-%20Miami%20ATCT%20SOP.pdf"},
+{"name":"D4 - Tampa ATCT","details":"Tampa Tracon SOP","updated_at":"7-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694104730374-ZMA%20D4%20-%20Tampa%20ATCT%20SOP.pdf"},
+{"name":"D6 - Ft. Myers ATCT","details":"Fort Myers Tracon SOP","updated_at":"7-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694104763360-ZMA%20D6%20-%20Ft%20Myers%20ATCT%20SOP.pdf"},
+{"name":"D8 - Ft. Lauderdale ATCT","details":"Fort Lauderdale SOP","updated_at":"7-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694104805983-ZMA%20D8%20-%20Ft%20Lauderdale%20ATCT%20SOP.pdf"}
+]},
+
+{"name":"Letters of Agreement","files":[
+{"name":"LOA - ZMA - MDCS/MTEG","details":"LOA between Miami ARTCC and Mid Caribbean FIR","updated_at":"8-Dec-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694105644722-MDCS-KZMA-LOA_3.pdf"},
+{"name":"LOA - ZMA - MUFH","details":"LOA between Havana FIR and Miami ARTCC","updated_at":"7-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694105338136-ZMA-MUFH%20LOA%20(A).pdf"},
+{"name":"LOA - ZMA - USN","details":"LOA between Virtual United States Navy and Miami Center (ZMA)","updated_at":"7-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694105417634-ZMA%20-%20VUSN.pdf"},
+{"name":"LOA - ZMA - VATCAR","details":"LOA between Vatsim Caribbean Division and Miami ARTCC","updated_at":"22-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1695395461128-VATCAR-ZMA%20LOA%20v2.pdf"},
+{"name":"LOA - ZMA - ZHU","details":"LOA between Houston ARTCC and Miami ARTCC","updated_at":"24-Jan-2024","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1706115731043-20240124%20ZMA%20ZHU%20LOA.pdf"},
+{"name":"LOA - ZMA - ZJX","details":"LOA between Jacksonville ARTCC and Miami ARTCC","updated_at":"28-Feb-2024","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1709079464086-20240227%20ZJX-ZMA%20LOA%20vE.pdf"},
+{"name":"LOA - ZMA - ZSU","details":"LOA between San Juan CERAC and Miami ARTCC","updated_at":"7-Sep-2023","url":"https://zma-web.nyc3.digitaloceanspaces.com/downloads/1694104923944-ZMO-ZSU%20LOA_1.pdf"}
+]}
+]
+
