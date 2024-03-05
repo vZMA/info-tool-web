@@ -1,9 +1,9 @@
 ﻿using Coravel.Scheduling.Schedule.Interfaces;
-using ZoaReference.Features.Charts.ScheduledJobs;
-using ZoaReference.FeatureUtilities.Interfaces;
-using ZoaReference.Features.Charts.Services;
+using ZmaReference.Features.Charts.ScheduledJobs;
+using ZmaReference.FeatureUtilities.Interfaces;
+using ZmaReference.Features.Charts.Services;
 
-namespace ZoaReference.Features.Charts;
+namespace ZmaReference.Features.Charts;
 
 public class ChartsFeature : IServiceConfigurator, ISchedulerConfigurator
 {

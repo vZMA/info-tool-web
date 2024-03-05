@@ -3,9 +3,9 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using ZoaReference.Features.VnasData.Models;
+using ZmaReference.Features.VnasData.Models;
 
-namespace ZoaReference.Features.VnasData.Services;
+namespace ZmaReference.Features.VnasData.Services;
 
 public class CachedVnasDataService(IMemoryCache cache, IHttpClientFactory httpClientFactory, IOptionsMonitor<AppSettings> appSettings, ILogger<CachedVnasDataService> logger)
 {

@@ -1,4 +1,4 @@
-﻿namespace ZoaReference.Features.Routes.Models;
+﻿namespace ZmaReference.Features.Routes.Models;
 
 public class AirportPairRouteSummary(string departureIcaoId, string arrivalIcaoId)
 {

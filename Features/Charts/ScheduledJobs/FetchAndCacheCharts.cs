@@ -1,8 +1,8 @@
 ﻿using Coravel.Invocable;
 using Microsoft.Extensions.Options;
-using ZoaReference.Features.Charts.Services;
+using ZmaReference.Features.Charts.Services;
 
-namespace ZoaReference.Features.Charts.ScheduledJobs;
+namespace ZmaReference.Features.Charts.ScheduledJobs;
 
 public class FetchAndCacheCharts(ILogger<FetchAndCacheCharts> logger, AviationApiChartService chartService, IOptionsMonitor<AppSettings> appSettings) : IInvocable
 {

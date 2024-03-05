@@ -1,11 +1,11 @@
 ﻿using Coravel.Invocable;
 using Microsoft.Extensions.Options;
-using ZoaReference.Features.Docs.Models;
-using ZoaReference.Features.Docs.Repositories;
+using ZmaReference.Features.Docs.Models;
+using ZmaReference.Features.Docs.Repositories;
 
-namespace ZoaReference.Features.Docs.ScheduledJobs;
+namespace ZmaReference.Features.Docs.ScheduledJobs;
 
-public class FetchAndStoreZoaDocs(ILogger<FetchAndStoreZoaDocs> logger, IHttpClientFactory httpClientFactory, IWebHostEnvironment webHostEnvironment, IOptionsMonitor<AppSettings> appSettings, DocumentRepository documentRepository) : IInvocable
+public class FetchAndStoreZmaDocs(ILogger<FetchAndStoreZmaDocs> logger, IHttpClientFactory httpClientFactory, IWebHostEnvironment webHostEnvironment, IOptionsMonitor<AppSettings> appSettings, DocumentRepository documentRepository) : IInvocable
 {
     public async Task Invoke()
     {
@@ -14,19 +14,19 @@ public class FetchAndStoreZoaDocs(ILogger<FetchAndStoreZoaDocs> logger, IHttpCli
 
         try
         {
-            logger.LogInformation("Fetching ZOA docs from {url}",
-                appSettings.CurrentValue.Urls.ZoaDocumentsApiEndpoint);
-            fetchedDocCategories = await client.GetFromJsonAsync<List<DocumentCategory>>(appSettings.CurrentValue.Urls.ZoaDocumentsApiEndpoint);
-            logger.LogInformation("Successfully fetched ZOA docs");
+            logger.LogInformation("Fetching ZMA docs from {url}",
+                appSettings.CurrentValue.Urls.ZmaDocumentsApiEndpoint);
+            fetchedDocCategories = await client.GetFromJsonAsync<List<DocumentCategory>>(appSettings.CurrentValue.Urls.ZmaDocumentsApiEndpoint);
+            logger.LogInformation("Successfully fetched ZMA docs");
         }
         catch (Exception e)
         {
-            logger.LogError("Error while fetching ZOA docs: {ex}", e.ToString());
+            logger.LogError("Error while fetching ZMA docs: {ex}", e.ToString());
         }
 
         if (fetchedDocCategories is null || fetchedDocCategories.Count == 0)
         {
-            logger.LogInformation("Fetched ZOA documents null or zero");
+            logger.LogInformation("Fetched ZMA documents null or zero");
             return;
         }
 

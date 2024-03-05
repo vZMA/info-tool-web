@@ -4,10 +4,10 @@ using Coravel.Invocable;
 using CsvHelper;
 using CsvHelper.Configuration;
 using Microsoft.Extensions.Options;
-using ZoaReference.Features.Routes.Models;
-using ZoaReference.Features.Routes.Repositories;
+using ZmaReference.Features.Routes.Models;
+using ZmaReference.Features.Routes.Repositories;
 
-namespace ZoaReference.Features.Routes.ScheduledJobs;
+namespace ZmaReference.Features.Routes.ScheduledJobs;
 
 public class FetchAndStoreLoaRules(ILogger<FetchAndStoreLoaRules> logger, IHttpClientFactory httpClientFactory, LoaRuleRepository loaRules, IOptionsMonitor<AppSettings> appSettings) : IInvocable
 {

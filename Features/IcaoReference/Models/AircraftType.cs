@@ -1,4 +1,4 @@
-﻿namespace ZoaReference.Features.IcaoReference.Models;
+﻿namespace ZmaReference.Features.IcaoReference.Models;
 
 public class AircraftType
 {

@@ -1,6 +1,6 @@
-﻿using ZoaReference.Features.DigitalAtis.Models;
+﻿using ZmaReference.Features.DigitalAtis.Models;
 
-namespace ZoaReference.Features.DigitalAtis.Repositories;
+namespace ZmaReference.Features.DigitalAtis.Repositories;
 
 public class DigitalAtisRepository(ILogger<DigitalAtisRepository> logger)
 {

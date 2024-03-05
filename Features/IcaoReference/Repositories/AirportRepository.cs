@@ -1,6 +1,6 @@
-﻿using ZoaReference.Features.IcaoReference.Models;
+﻿using ZmaReference.Features.IcaoReference.Models;
 
-namespace ZoaReference.Features.IcaoReference.Repositories;
+namespace ZmaReference.Features.IcaoReference.Repositories;
 
 public class AirportRepository
 {

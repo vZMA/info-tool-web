@@ -1,7 +1,7 @@
 ﻿using Coravel;
-using ZoaReference.FeatureUtilities.Interfaces;
+using ZmaReference.FeatureUtilities.Interfaces;
 
-namespace ZoaReference.FeatureUtilities;
+namespace ZmaReference.FeatureUtilities;
 
 public static class ServiceExtensions
 {

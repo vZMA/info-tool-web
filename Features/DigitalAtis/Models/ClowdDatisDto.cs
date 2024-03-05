@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ZoaReference.Features.DigitalAtis.Models;
+namespace ZmaReference.Features.DigitalAtis.Models;
 
 public class ClowdDatisDto
 {

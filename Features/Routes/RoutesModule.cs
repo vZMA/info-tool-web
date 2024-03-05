@@ -1,10 +1,10 @@
 ﻿using Coravel.Scheduling.Schedule.Interfaces;
-using ZoaReference.Features.Routes.Repositories;
-using ZoaReference.Features.Routes.ScheduledJobs;
-using ZoaReference.Features.Routes.Services;
-using ZoaReference.FeatureUtilities.Interfaces;
+using ZmaReference.Features.Routes.Repositories;
+using ZmaReference.Features.Routes.ScheduledJobs;
+using ZmaReference.Features.Routes.Services;
+using ZmaReference.FeatureUtilities.Interfaces;
 
-namespace ZoaReference.Features.Routes;
+namespace ZmaReference.Features.Routes;
 
 public class RoutesModule : IServiceConfigurator, ISchedulerConfigurator
 {

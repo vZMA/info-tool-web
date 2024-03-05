@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ZoaReference.Features.VnasData.Models;
+namespace ZmaReference.Features.VnasData.Models;
 
 // Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
 public class Area

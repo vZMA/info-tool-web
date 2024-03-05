@@ -1,9 +1,9 @@
 ﻿using Coravel.Scheduling.Schedule.Interfaces;
-using ZoaReference.Features.DigitalAtis.Repositories;
-using ZoaReference.Features.DigitalAtis.ScheduledJobs;
-using ZoaReference.FeatureUtilities.Interfaces;
+using ZmaReference.Features.DigitalAtis.Repositories;
+using ZmaReference.Features.DigitalAtis.ScheduledJobs;
+using ZmaReference.FeatureUtilities.Interfaces;
 
-namespace ZoaReference.Features.DigitalAtis;
+namespace ZmaReference.Features.DigitalAtis;
 
 public class DigitalAtisModule : IServiceConfigurator, ISchedulerConfigurator
 {

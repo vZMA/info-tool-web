@@ -1,4 +1,4 @@
-﻿namespace ZoaReference;
+﻿namespace ZmaReference;
 
 public class AppSettings
 {
@@ -43,7 +43,7 @@ public class AppSettings
         public string AliasTextFile { get; set;} = string.Empty;
         public string VatspyData { get; set; } = string.Empty;
         public string LoaFile { get; set; } = string.Empty;
-        public string ZoaDocumentsApiEndpoint { get; set; } = string.Empty;
+        public string ZmaDocumentsApiEndpoint { get; set; } = string.Empty;
     }
 
     public class ArtccAirportsSettings

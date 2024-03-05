@@ -1,6 +1,6 @@
-﻿using ZoaReference.Features.Docs.Models;
+﻿using ZmaReference.Features.Docs.Models;
 
-namespace ZoaReference.Features.Docs.Repositories;
+namespace ZmaReference.Features.Docs.Repositories;
 
 public class DocumentRepository
 {

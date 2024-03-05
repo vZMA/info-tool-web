@@ -1,4 +1,4 @@
-﻿namespace ZoaReference.FeatureUtilities.Interfaces;
+﻿namespace ZmaReference.FeatureUtilities.Interfaces;
 
 public interface IServiceConfigurator
 {

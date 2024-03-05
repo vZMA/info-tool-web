@@ -1,10 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 using Coravel.Invocable;
 using Microsoft.Extensions.Options;
-using ZoaReference.Features.IcaoReference.Models;
-using ZoaReference.Features.IcaoReference.Repositories;
+using ZmaReference.Features.IcaoReference.Models;
+using ZmaReference.Features.IcaoReference.Repositories;
 
-namespace ZoaReference.Features.IcaoReference.ScheduledJobs;
+namespace ZmaReference.Features.IcaoReference.ScheduledJobs;
 
 public partial class FetchAndStoreAirports(ILogger<FetchAndStoreAirports> logger, IHttpClientFactory httpClientFactory, IOptionsMonitor<AppSettings> appSettings, AirportRepository airportRepository) : IInvocable
 {

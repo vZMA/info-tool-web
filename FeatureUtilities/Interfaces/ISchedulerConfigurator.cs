@@ -1,6 +1,6 @@
 ﻿using Coravel.Scheduling.Schedule.Interfaces;
 
-namespace ZoaReference.FeatureUtilities.Interfaces;
+namespace ZmaReference.FeatureUtilities.Interfaces;
 
 public interface ISchedulerConfigurator
 {

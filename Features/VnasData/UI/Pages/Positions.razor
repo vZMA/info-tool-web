@@ -1,8 +1,8 @@
 ﻿@page "/positions"
 @rendermode InteractiveServer
 
-@using ZoaReference.Features.VnasData.Models
-@using ZoaReference.Features.VnasData.Services
+@using ZmaReference.Features.VnasData.Models
+@using ZmaReference.Features.VnasData.Services
 
 @inject CachedVnasDataService VnasData
 @inject IJSRuntime Js
@@ -37,7 +37,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var fetchedFacilities = await VnasData.GetArtccFacilities("ZOA");
+        var fetchedFacilities = await VnasData.GetArtccFacilities("ZMA");
         _positions = fetchedFacilities is not null ? fetchedFacilities.SelectMany(f => f.Positions).ToList() : new List<Position>();
     }
 

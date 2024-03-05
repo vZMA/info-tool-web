@@ -2,10 +2,10 @@
 using AngleSharp.Html.Parser;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using ZoaReference.Common;
-using ZoaReference.Features.Routes.Models;
+using ZmaReference.Common;
+using ZmaReference.Features.Routes.Models;
 
-namespace ZoaReference.Features.Routes.Services;
+namespace ZmaReference.Features.Routes.Services;
 
 public partial class FlightAwareRouteService(IHttpClientFactory httpClientFactory, IOptionsMonitor<AppSettings> appSettings, IMemoryCache cache)
 {

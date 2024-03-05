@@ -1,10 +1,10 @@
 ﻿using System.Text.Json;
 using Coravel.Invocable;
 using Microsoft.Extensions.Options;
-using ZoaReference.Features.DigitalAtis.Models;
-using ZoaReference.Features.DigitalAtis.Repositories;
+using ZmaReference.Features.DigitalAtis.Models;
+using ZmaReference.Features.DigitalAtis.Repositories;
 
-namespace ZoaReference.Features.DigitalAtis.ScheduledJobs;
+namespace ZmaReference.Features.DigitalAtis.ScheduledJobs;
 
 public class FetchAndStoreAtis(ILogger<FetchAndStoreAtis> logger, IHttpClientFactory httpClientFactory, IOptionsMonitor<AppSettings> appSettings, DigitalAtisRepository digitalAtisRepository) : IInvocable, ICancellableInvocable
 {
