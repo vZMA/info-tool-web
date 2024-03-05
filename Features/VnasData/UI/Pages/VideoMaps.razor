@@ -34,7 +34,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var fetchedMaps = await VnasData.GetArtccVideoMaps("ZMA");
+        var fetchedMaps = await VnasData.GetArtccVideoMaps("ZOA");
         _maps = fetchedMaps is not null ? fetchedMaps.ToList() : new List<VideoMap>();
     }
     

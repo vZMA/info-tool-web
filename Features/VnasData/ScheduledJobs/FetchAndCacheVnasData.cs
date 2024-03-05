@@ -12,6 +12,6 @@ public class FetchAndCacheVnasData(ILogger<FetchAndCacheCharts> logger, CachedVn
     {
         // This method forces service to fetch and cache, and we can discard value
         logger.LogInformation("Fetching all VNAS Data for ZMA");
-        await vnasDataService.ForceCache("ZMA");
+        await vnasDataService.ForceCache("ZOA");
     }
 }
