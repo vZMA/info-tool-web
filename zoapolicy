@@ -1,0 +1,47 @@
+[{"name":"Central Policy Statement","files":[
+{"name":"General Policies and Procedures - CPS-001","details":"General ARTCC Policies and Procedures","updated_at":"25-Dec-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/abc892a5-563e-11e9-8010-2a32edb55910"},
+{"name":"Training Policies and Procedures - CPS-002","details":"ARTCC Training Policies and Procedures","updated_at":"01-Jan-2024","url":"https:\/\/oakartcc.org\/controllers\/file\/7be85e57-5b1e-11e9-8010-2a32edb55910"},
+{"name":"Event Policies and Procedures - CPS-003","details":"ARTCC Event Policies and Procedures","updated_at":"28-Dec-2021","url":"https:\/\/oakartcc.org\/controllers\/file\/91ea8c11-5b1e-11e9-8010-2a32edb55910"},
+{"name":"ATCT Policies and Procedures - CPS-004","details":"Airport Traffic  Control Tower Policies and Procedures","updated_at":"14-Jul-2022","url":"https:\/\/oakartcc.org\/controllers\/file\/a83f4023-5b1e-11e9-8010-2a32edb55910"},
+{"name":"Military Airport Policies - CPS-005","details":"Military Airport Policies ","updated_at":"17-Jan-2021","url":"https:\/\/oakartcc.org\/controllers\/file\/119f1566-ae43-11ea-aa39-2a32edb55910"},
+{"name":"GCAP Transition Procedure - CPS-001.A1","details":"This file is a temporary addendum specifying how ratings will transfer to GCAP","updated_at":"25-Dec-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/a1f41309-a34c-11ee-adde-2a32edb55910"}
+]},
+
+{"name":"Enroute","files":[
+{"name":"Oakland Center SOP","details":"Oakland Center Standard Operating Procedures","updated_at":"25-Jan-2024","url":"https:\/\/oakartcc.org\/controllers\/file\/492979a8-5e65-11e9-8010-2a32edb55910"},
+{"name":"Appendix A - Area East","details":"Enroute SOP Appendix A - Area East. Supplementary information for high traffic sectorizations only.","updated_at":"20-Apr-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/eb79cb9f-b396-11ed-a96c-2a32edb55910"},
+{"name":"Appendix B - Area North","details":"Enroute SOP Appendix B - Area North. Supplementary information for high traffic sectorizations only.","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/2cc72ad6-b397-11ed-a96c-2a32edb55910"},
+{"name":"Appendix C - Area South","details":"Enroute SOP Appendix C - Area South. Supplementary information for high traffic sectorizations only.","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/f69dda08-b39c-11ed-a96c-2a32edb55910"},
+{"name":"Appendix D - Pac North","details":"Enroute SOP Appendix D - Pac North. Supplementary information for high traffic sectorizations only.","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/1c256e25-b39d-11ed-a96c-2a32edb55910"},
+{"name":"Appendix E - Pac South","details":"Enroute SOP Appendix E - Pac South. Supplementary information for high traffic sectorizations only.","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/2fc32f6c-b39d-11ed-a96c-2a32edb55910"}
+]},
+
+{"name":"TRACON","files":[
+{"name":"NORCAL TRACON SOP","details":"30NOV2023 version with fixed table of contents","updated_at":"29-Dec-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/7576a83b-5e65-11e9-8010-2a32edb55910"},
+{"name":"Fresno ATCT\/TRACON SOP","details":"Fresno ATCT\/TRACON Standard Operating Procedures","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/ff772465-7d9e-11e9-b73d-2a32edb55910"}]},
+{"name":"Airport Traffic Control Tower","files":[{"name":"San Francisco ATCT SOP","details":"San Francisco ATCT Standard Operating Procedures","updated_at":"30-Nov-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/9a2b1e84-5e65-11e9-8010-2a32edb55910"},
+{"name":"Oakland ATCT SOP","details":"Oakland ATCT Standard Operating Procedures","updated_at":"24-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/1217f464-6766-11e9-8010-2a32edb55910"},
+{"name":"San Jose ATCT SOP","details":"San Jose ATCT Standard Operating Procedures","updated_at":"24-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/216fc1b9-6766-11e9-8010-2a32edb55910"},
+{"name":"Sacramento ATCT SOP","details":"Sacramento ATCT Standard Operating Procedures","updated_at":"30-Nov-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/483edda1-bfc4-11e9-8019-2a32edb55910"},
+{"name":"Monterey ATCT SOP","details":"Monterey ATCT Standard Operating Procedures","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/603bd557-bfc4-11e9-8019-2a32edb55910"},
+{"name":"Reno-Tahoe ATCT SOP","details":"Reno-Tahoe ATCT Standard Operating Procedures","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/ec4eddba-7d9e-11e9-b73d-2a32edb55910"},
+{"name":"ZOA Class D Airports SOP","details":"Class D ATCT Standard Operating Procedures","updated_at":"30-Nov-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/ee655613-5e65-11e9-8010-2a32edb55910"}
+]},
+
+{"name":"Internal Letters of Agreement","files":
+[{"name":"Northern California TRACON (NCT) - Fresno (FAT) ATCT\/TRACON LOA","details":"Northern California TRACON (NCT) \u2013 Fresno (FAT) ATCT\/TRACON LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/ec101d68-ae44-11ea-aa39-2a32edb55910"},
+{"name":"Oakland Center (ZOA) - Fresno (FAT) ATCT\/TRACON LOA","details":"Oakland Center (ZOA) \u2013 Fresno (FAT) ATCT\/TRACON LOA","updated_at":"18-Sep-2021","url":"https:\/\/oakartcc.org\/controllers\/file\/fc2bd476-ae44-11ea-aa39-2a32edb55910"},
+{"name":"Oakland Center (ZOA) - Northern California TRACON (NCT) LOA","details":"Oakland Center (ZOA) \u2013 Northern California TRACON (NCT) LOA","updated_at":"25-Jan-2024","url":"https:\/\/oakartcc.org\/controllers\/file\/0e7f63e3-ae45-11ea-aa39-2a32edb55910"}]},
+{"name":"External Letters of Agreement","files":[{"name":"Oakland Center (ZOA) - Los Angeles Center (ZLA) LOA","details":"Oakland Center\/ Los Angeles Center LOA","updated_at":"23-Feb-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/3779589d-ae45-11ea-aa39-2a32edb55910"},
+{"name":"Oakland Center (ZOA) - Salt Lake City Center (ZLC) LOA","details":"Oakland Center \/ Salt Lake Center LOA","updated_at":"23-May-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/72d39e4f-ae45-11ea-aa39-2a32edb55910"},
+{"name":"Oakland Center (ZOA) - Seattle Center (ZSE) LOA","details":"Oakland Center\/ Seattle Center LOA","updated_at":"28-Jan-2024","url":"https:\/\/oakartcc.org\/controllers\/file\/84f7be5c-ae45-11ea-aa39-2a32edb55910"}]},
+{"name":"Military Letters Of Agreement","files":[{"name":"Oakland Center (ZOA) - Travis RAPCON (SUU) LOA","details":"Travis RAPCON\/ Oakland ARTCC LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/7c9e6db4-ae43-11ea-aa39-2a32edb55910"},
+{"name":"Northern California TRACON (NCT) - Travis RAPCON (SUU) LOA","details":"Travis  RAPCON\/ Northern California TRACON LOA","updated_at":"25-Oct-2021","url":"https:\/\/oakartcc.org\/controllers\/file\/9a8a61a5-ae43-11ea-aa39-2a32edb55910"},
+{"name":"Oakland Center (ZOA) - NAS Lemoore RATCF (NLC) LOA","details":"NAS Lemoore RATCF\/ Oakland Center LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/be9281bb-ae43-11ea-aa39-2a32edb55910"},
+{"name":"Northern California TRACON (NCT) - NAS Lemoore RATCF (NLC) LOA","details":"NAS Lemoore\/ Northern California TRACON LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/d59d23e8-ae43-11ea-aa39-2a32edb55910"},
+{"name":"Oakland Center (ZOA) - NAS Fallon RATCF (NFL) LOA","details":"NAS Fallon RATCF\/ Oakland Center LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/ee7edc8a-ae43-11ea-aa39-2a32edb55910"},
+{"name":"Northern California TRACON (NCT) - NAS Fallon RATCF (NFL) LOA","details":"NAS Fallon RATCF\/ Northern California TRACON LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/1cc0f099-ae44-11ea-aa39-2a32edb55910"},
+{"name":"Northern California TRACON (NCT) - Beale AFB ATCT (BAB) LOA","details":"Beale AFB\/ Northern California TRACON LOA","updated_at":"14-Jun-2020","url":"https:\/\/oakartcc.org\/controllers\/file\/368486d2-ae44-11ea-aa39-2a32edb55910"}]},
+{"name":"ZAK Documents","files":[{"name":"Pacific Oceanic LOA","details":"VATPAC\/VATNZ\/VATJPN\/VATMEX\/ZOA LOA","updated_at":"22-Aug-2022","url":"https:\/\/oakartcc.org\/controllers\/file\/0810fda5-1c16-11ec-9430-2a32edb55910"},
+{"name":"Oakland OCA (ZAK) SOP","details":"Oakland Oceanic SOP","updated_at":"28-May-2023","url":"https:\/\/oakartcc.org\/controllers\/file\/e8a98e09-1c16-11ec-9430-2a32edb55910"}
+]}]
