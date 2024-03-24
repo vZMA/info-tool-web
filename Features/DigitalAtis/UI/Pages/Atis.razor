@@ -34,7 +34,7 @@
 }
 
 @code {
-    private readonly string[] _airports = { "KMIA", "KTPA", "KFLL", "KPBI", "KRSW" };
+    private readonly string[] _airports = { "KMIA", "KTPA", "KFLL", "KPBI", "KRSW", "KSRQ" };
     private IEnumerable<Models.Atis> _atisEnumerable = Enumerable.Empty<Models.Atis>();
     private static string GetIssueTimeString(Models.Atis atis) => atis.IssueTime.ToString("HH:mm");
     
