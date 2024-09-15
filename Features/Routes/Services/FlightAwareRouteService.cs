@@ -25,7 +25,7 @@ public partial class FlightAwareRouteService(IHttpClientFactory httpClientFactor
 
             // Open FlightAware IFR routing page
             var client = httpClientFactory.CreateClient();
-            client.DefaultRequestHeaders.UserAgent.TryParseAdd("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36");//Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0");
+            client.DefaultRequestHeaders.UserAgent.TryParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0");
             await using var stream = await client.GetStreamAsync(MakeUrl(departureIcao, arrivalIcao));
             var parser = new HtmlParser();
             using var document = await parser.ParseDocumentAsync(stream);
