@@ -25,40 +25,7 @@
             <ValidationMessage For="() => _routeForm.ArrivalId"/>
         </EditForm>
     </div>
-    
-    @if (_displayedAliasRouteRules.Any())
-    {
-        <div class="border border-slate-600 p-2">
-            <h1 class="text-2xl">TEC/AAR/ADR Routes</h1>
-            <QuickGrid Items="@_displayedAliasRouteRules.AsQueryable()">
-                <TemplateColumn Title="Dep Runway">
-                    @if (context.DepartureRunway is null)
-                    {
-                        <span class="text-gray-500">Any</span>
-                    }
-                    else
-                    {
-                        <span>@context.DepartureRunway</span>
-                    }
-                </TemplateColumn>
-                <TemplateColumn Title="Arr Runway">
-                    @if (context.ArrivalRunway is null)
-                    {
-                        <span class="text-gray-500">Any</span>
-                    }
-                    else
-                    {
-                        <span>@context.ArrivalRunway</span>
-                    }
-                </TemplateColumn>
-                <TemplateColumn Title="Types">
-                    <FormattedAircraftType AircraftTypes="@context.AllowedAircraftTypes" />
-                </TemplateColumn>
-                <PropertyColumn Property="@(p => p.Route)" />
-            </QuickGrid>
-        </div>
-    }
-    
+
     @if (_displayedLoaRules.Any())
     {
         <div class="border border-slate-600 p-2">
@@ -78,7 +45,7 @@
             </QuickGrid>
         </div>
     }
-    
+
     @if (_showFlightAwareLoading || _displayedFlightAwareRoutes is not null)
     {
         <div class="border border-slate-600 p-2">
@@ -176,17 +143,17 @@
                 .Where(r => r.DepartureAirportRegex.IsMatch(departureIcao)
                            && r.ArrivalAirportRegex.IsMatch(arrivalIcao));
 
-            _showFlightAwareLoading = true;
+            //_showFlightAwareLoading = true;
             //try
             //{
                 //_displayedFlightAwareRoutes = await FlightAware.FetchRoutesAsync(departureIcao, arrivalIcao);
               //  _isFlightAwareError = false;
             //}
             //catch (Exception)
-            {
+            //{
                 _displayedFlightAwareRoutes = null;
                 _isFlightAwareError = true;
-            }
+            //}
             _showFlightAwareLoading = false;
         }
     }
