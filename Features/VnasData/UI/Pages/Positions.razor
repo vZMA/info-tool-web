@@ -37,7 +37,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var fetchedFacilities = await VnasData.GetArtccFacilities("ZOA");
+        var fetchedFacilities = await VnasData.GetArtccFacilities("ZMA");
         _positions = fetchedFacilities.SelectMany(f => f.Facility.Positions).ToList();
     }
 
