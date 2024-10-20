@@ -1,8 +1,8 @@
 ﻿@page "/videomaps"
 @rendermode InteractiveServer
 
-@using ZoaReference.Features.VnasData.Models
-@using ZoaReference.Features.VnasData.Services
+@using ZmaReference.Features.VnasData.Models
+@using ZmaReference.Features.VnasData.Services
 
 @inject CachedVnasDataService VnasData
 @inject IJSRuntime Js
@@ -44,7 +44,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _facilities = (await VnasData.GetArtccFacilities("ZOA")).Where(f => f.Facility.StarsConfiguration is not null);
+        _facilities = (await VnasData.GetArtccFacilities("ZMA")).Where(f => f.Facility.StarsConfiguration is not null);
     }
     
     protected override async Task OnAfterRenderAsync(bool firstRender)
