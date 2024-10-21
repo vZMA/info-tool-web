@@ -9,7 +9,8 @@ namespace ZmaReference.Features.Routes.Services;
 
 public partial class FlightAwareRouteService(IHttpClientFactory httpClientFactory, IOptionsMonitor<AppSettings> appSettings, IMemoryCache cache, ILogger<FlightAwareRouteService> logger)
 {
- 
+    public async Task<AirportPairRouteSummary> FetchRoutesAsync(string departureIcao, string arrivalIcao)
+    {
     }
 
     public string MakeUrl(string departureIcao, string arrivalIcao)
