@@ -7,7 +7,7 @@
 @inject IJSRuntime Js
 @inject ProtectedSessionStorage ProtectedSessionStore
 
-<PageTitle>Vid Maps - ZOA Reference</PageTitle>
+<PageTitle>Vid Maps - ZMA Reference</PageTitle>
 
 <div class="ml-1 mb-4">
     <select @bind:get="_selectedFacilityId" @bind:set="UpdateSelectedFacility"
@@ -48,7 +48,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _facilities = (await VnasData.GetArtccFacilities("ZOA")).Where(f => f.Facility.StarsConfiguration is not null);
+        _facilities = (await VnasData.GetArtccFacilities("ZMA")).Where(f => f.Facility.StarsConfiguration is not null);
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

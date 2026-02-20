@@ -6,7 +6,7 @@
 @inject CachedVnasDataService VnasData
 @inject IJSRuntime Js
 
-<PageTitle>Positions - ZOA Reference</PageTitle>
+<PageTitle>Positions - ZMA Reference</PageTitle>
 
 <input @ref="@_input"
        class="bg-transparent border border-gray-500 focus:outline-none focus:bg-gray-700 p-0.5  mb-2 ml-1 w-40"
@@ -41,7 +41,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var fetchedFacilities = await VnasData.GetArtccFacilities("ZOA");
+        var fetchedFacilities = await VnasData.GetArtccFacilities("ZMA");
         
         var tcps = fetchedFacilities
             .Where(f => f.Facility.StarsConfiguration is not null)
