@@ -26,7 +26,9 @@
 @if (!string.IsNullOrEmpty(_displayedPdfUrl))
 {
     <div class="grow flex flex-col">
-        <object class="mt-2 pt-1 w-full grow" type="application/pdf" data="@_displayedPdfUrl"></object>
+        <object class="mt-2 pt-1 w-full grow" type="application/pdf" data="@_displayedPdfUrl">
+            <p class="text-gray-400 p-4">Unable to display PDF: @Path.GetFileName(_displayedPdfUrl)</p>
+        </object>
     </div>
 }
 
@@ -38,14 +40,21 @@
     {
         if (firstRender)
         {
-            var savedStateTask = await ProtectedSessionStore.GetAsync<string>("proceduresPdfUrl");
-            if (!savedStateTask.Success || savedStateTask.Value is null)
+            try
             {
-                return;
-            }
+                var savedStateTask = await ProtectedSessionStore.GetAsync<string>("proceduresPdfUrl");
+                if (!savedStateTask.Success || savedStateTask.Value is null)
+                {
+                    return;
+                }
 
-            _displayedPdfUrl = savedStateTask.Value;
-            StateHasChanged();
+                _displayedPdfUrl = savedStateTask.Value;
+                StateHasChanged();
+            }
+            catch
+            {
+                // Session storage data may be unreadable (e.g. stale data after server restart)
+            }
         }
     }
 
