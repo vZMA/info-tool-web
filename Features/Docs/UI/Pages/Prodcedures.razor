@@ -11,7 +11,8 @@
 
 <div>
     <select @bind="_displayedPdfUrl" @bind:after="UpdateStoredUrl" class="p-2 bg-gray-700 text-gray-100 w-[600px]">
-        @foreach (var category in DocumentRepository.Categories)
+ <option value="" disabled>Select a document...</option>        
+@foreach (var category in DocumentRepository.Categories)
         {
             <optgroup label="@category.Name" class="text-gray-400">
                 @foreach (var doc in category.Documents)
