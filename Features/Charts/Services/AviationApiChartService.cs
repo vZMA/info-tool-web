@@ -131,9 +131,7 @@ public class AviationApiChartService(ILogger<AviationApiChartService> logger, IH
 
         var split = chartDto.ChartName.Split(", CONT.");
         name = split[0];
-        if (!int.TryParse(split[1], out var pageNum))
-            return false;
-        page = pageNum + 1; // Means that "CONT.1" returns page 2
+        page = int.Parse(split[1]) + 1; // Means that "CONT.1" returns page 2
         return true;
     }
 
