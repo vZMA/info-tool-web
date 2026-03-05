@@ -258,8 +258,22 @@
             if (savedStateTask is { Success: true, Value: not null })
             {
                 await UpdateCharts(savedStateTask.Value.AirportId);
-                _displayedChart = savedStateTask.Value.Chart;
-                _displayedChartPage = savedStateTask.Value.Page;
+                var savedChartName = savedStateTask.Value.Chart?.ChartName;
+                var savedPageNumber = savedStateTask.Value.Page?.PageNumber ?? 1;
+                if (savedChartName is not null)
+                {
+                    var allCharts = _organizedCharts.Info
+                        .Concat(_organizedCharts.Sid)
+                        .Concat(_organizedCharts.Star)
+                        .Concat(_organizedCharts.Approach.Values.SelectMany(v => v));
+                    var freshChart = allCharts.FirstOrDefault(c => c.ChartName == savedChartName);
+                    if (freshChart is not null)
+                    {
+                        _displayedChart = freshChart;
+                        _displayedChartPage = freshChart.Pages.FirstOrDefault(p => p.PageNumber == savedPageNumber)
+                            ?? freshChart.Pages.OrderBy(p => p.PageNumber).First();
+                    }
+                }
                 stateUpdated = true;
             }
         }
