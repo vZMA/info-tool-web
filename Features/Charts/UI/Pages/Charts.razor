@@ -258,8 +258,28 @@
             if (savedStateTask is { Success: true, Value: not null })
             {
                 await UpdateCharts(savedStateTask.Value.AirportId);
-                _displayedChart = savedStateTask.Value.Chart;
-                _displayedChartPage = savedStateTask.Value.Page;
+
+                // Find the matching chart in freshly fetched data by name to get current PDF paths,
+                // since chart PDF paths change each FAA cycle.
+                var allFreshCharts = _organizedCharts.Info
+                    .Concat(_organizedCharts.Sid)
+                    .Concat(_organizedCharts.Star)
+                    .Concat(_organizedCharts.Approach.Values.SelectMany(v => v));
+                var freshChart = allFreshCharts.FirstOrDefault(c => c.ChartName == savedStateTask.Value.Chart?.ChartName);
+                if (freshChart is not null)
+                {
+                    _displayedChart = freshChart;
+                    var savedPageNumber = savedStateTask.Value.Page?.PageNumber;
+                    _displayedChartPage = freshChart.Pages.OrderBy(p => p.PageNumber)
+                        .FirstOrDefault(p => p.PageNumber == savedPageNumber)
+                        ?? freshChart.Pages.OrderBy(p => p.PageNumber).First();
+                }
+                else
+                {
+                    _displayedChart = savedStateTask.Value.Chart;
+                    _displayedChartPage = savedStateTask.Value.Page;
+                }
+
                 stateUpdated = true;
             }
         }
