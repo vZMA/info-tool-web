@@ -25,10 +25,8 @@
 </div>
 @if (!string.IsNullOrEmpty(_displayedPdfUrl))
 {
-    <div class="grow flex items-stretch">
-        <div class="w-full mt-2">
-            <object class="pt-1 h-full w-full" type="application/pdf" data="@_displayedPdfUrl"></object>
-        </div>
+    <div class="grow flex flex-col">
+        <object class="mt-2 pt-1 w-full grow" type="application/pdf" data="@_displayedPdfUrl"></object>
     </div>
 }
 
@@ -60,7 +58,7 @@
     private string MakePdfPath(string url)
     {
         var name = GetPdfNameFromUrl(url);
-        return $"{AppSettings.CurrentValue.DocumentsPdfPath}/{name}.pdf";
+        return $"{AppSettings.CurrentValue.DocumentsPdfPath}/{Path.ChangeExtension(name, ".pdf")}";
     }
 
     private async Task UpdateStoredUrl()
