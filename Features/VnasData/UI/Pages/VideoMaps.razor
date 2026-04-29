@@ -21,13 +21,23 @@
     </select>
 </div>
 
-<input @ref="@_input"
-       class="bg-transparent border border-gray-500 focus:outline-none focus:bg-gray-700 p-0.5 mb-2 ml-1 w-40"
-       type="text" @bind="_filterText" @bind:event="oninput" placeholder="Search"/>
+<div class="flex items-center mb-2 ml-1">
+    @* Adjusted width to w-[340px] to align with the 'Name' column edge *@
+    <input @ref="@_input"
+           class="bg-transparent border border-gray-500 focus:outline-none focus:bg-gray-700 p-0.5 w-[340px]"
+           type="text" @bind="_filterText" @bind:event="oninput" placeholder="Search"/>
+    
+    <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-300 ml-2 whitespace-nowrap">
+        <input type="checkbox" @bind="_searchName" />
+        Search Name
+    </label>
+</div>
+
 <div class="text-s">
     <QuickGrid Items="@FilteredMaps">
         <PropertyColumn Title="STARS ID" Property="@(m => m.StarsId)" IsDefaultSortColumn Sortable="true"/>
-        <PropertyColumn Title="Name" Property="@(m => m.ShortName)" Sortable="true"/>
+        <PropertyColumn Title="Short Name" Property="@(m => m.ShortName)" Sortable="true"/>
+        <PropertyColumn Title="Name" Property="@(m => m.Name)" Sortable="true"/>
     </QuickGrid>
 </div>
 
@@ -48,6 +58,7 @@
             : _selectedFacility.VideoMaps.AsQueryable().Where(m => m.StarsId != 0 && ContainsFilterString(m, _filterText));
 
     private string _filterText = "";
+    private bool _searchName = false; // New toggle state
 
     protected override async Task OnInitializedAsync()
     {
@@ -91,11 +102,20 @@
         }
     }
 
-    private static bool ContainsFilterString(VideoMap m, string s)
+    private bool ContainsFilterString(VideoMap m, string s)
     {
-        return string.IsNullOrEmpty(s)
-               || m.ShortName.Contains(s, StringComparison.OrdinalIgnoreCase)
-               || m.StarsId.ToString().Contains(s, StringComparison.OrdinalIgnoreCase);
+        if (string.IsNullOrEmpty(s)) return true;
+
+        var matchesBasic = m.ShortName.Contains(s, StringComparison.OrdinalIgnoreCase)
+                           || m.StarsId.ToString().Contains(s, StringComparison.OrdinalIgnoreCase);
+
+        // If the checkbox is ticked, also check the 'Name' property
+        if (_searchName)
+        {
+            return matchesBasic || m.Name.Contains(s, StringComparison.OrdinalIgnoreCase);
+        }
+
+        return matchesBasic;
     }
 
 }
