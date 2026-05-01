@@ -1,0 +1,49 @@
+@page "/dialcodes"
+@using ZoaReference.Features.DialCodes.Models
+@using ZoaReference.Features.DialCodes.Repositories
+@rendermode InteractiveServer
+
+@inject DialCodeRepository Repo
+@inject IJSRuntime Js
+
+@using Microsoft.Extensions.Options
+@inject IOptions<AppSettings> Settings
+
+<PageTitle>Dial Codes - @Settings.Value.ARTCC Reference</PageTitle>
+
+<input @ref="@_input"
+       class="bg-transparent border border-gray-500 focus:outline-none focus:bg-gray-700 p-0.5 mb-2 ml-1 w-40"
+       type="text" @bind="_filterText" @bind:event="oninput" placeholder="Search"/>
+<div class="text-s">
+    <QuickGrid Items="@FilteredEntries">
+        <PropertyColumn Property="@(e => e.Sheet)" Sortable="true"/>
+        <PropertyColumn Property="@(e => e.Label)" Sortable="true"/>
+        <PropertyColumn Property="@(e => e.Code)" Title="Dial Code" Sortable="true"/>
+    </QuickGrid>
+</div>
+
+@code {
+    private IQueryable<DialCodeEntry> FilteredEntries =>
+        Repo.AllEntries
+            .Where(e => Matches(e, _filterText))
+            .OrderBy(e => e.Sheet)
+            .ThenBy(e => e.Label)
+            .AsQueryable();
+
+    private string _filterText = "";
+    private ElementReference _input;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Js.InvokeVoidAsync("SetFocusToElement", _input);
+        }
+    }
+
+    private static bool Matches(DialCodeEntry e, string s) =>
+        string.IsNullOrEmpty(s)
+        || e.Sheet.Contains(s, StringComparison.OrdinalIgnoreCase)
+        || e.Label.Contains(s, StringComparison.OrdinalIgnoreCase)
+        || e.Code.Contains(s, StringComparison.OrdinalIgnoreCase);
+}
