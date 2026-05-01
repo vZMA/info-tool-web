@@ -16,7 +16,7 @@
        type="text" @bind="_filterText" @bind:event="oninput" placeholder="Search"/>
 <div class="text-s">
     <QuickGrid Items="@FilteredEntries">
-        <PropertyColumn Property="@(e => e.Sheet)" Sortable="true"/>
+        <PropertyColumn Property="@(e => e.Sheet)" Title="Line" Sortable="true"/>
         <PropertyColumn Property="@(e => e.Label)" Sortable="true"/>
         <PropertyColumn Property="@(e => e.Code)" Title="Dial Code" Sortable="true"/>
     </QuickGrid>
