@@ -217,6 +217,7 @@
     private readonly List<Airport> _airports = [];
 
     private bool _airportInputShown;
+    private bool _focusAirportInput;
     private readonly AirportForm _airportForm = new();
     private InputText? _airportInputReference;
 
@@ -431,6 +432,7 @@
     {
         if (_airportInputShown) return;
         _airportInputShown = true;
+        _focusAirportInput = true;
     }
 
     private async Task AirportSubmit()
@@ -438,7 +440,7 @@
         if (string.IsNullOrWhiteSpace(_airportForm.AirportId)) return;
 
         var id = _airportForm.AirportId.ToUpper();
-        if (id.Length == 3) id = "K" + id;
+        if (id.Length == 3 && id.All(char.IsLetter)) id = "K" + id;
 
         // Check if it already exists to prevent UI clutter
         if (_airports.Any(a => a.Id == id))
@@ -566,7 +568,7 @@
         if (!string.IsNullOrEmpty(AirportId))
         {
             var targetId = AirportId.ToUpper();
-            if (targetId.Length == 3) targetId = "K" + targetId;
+            if (targetId.Length == 3 && targetId.All(char.IsLetter)) targetId = "K" + targetId;
 
             // CRITICAL FIX: Set this immediately so the CSS classes match on the first render
             _airportId = targetId;
@@ -584,6 +586,12 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        if (_focusAirportInput)
+        {
+            _focusAirportInput = false;
+            await Js.InvokeVoidAsync("SetFocusToId", "airportInput");
+        }
+
         if (!firstRender) return;
 
         try
@@ -637,7 +645,9 @@
                         await UpdateCharts(_airportId);
                         if (savedState.Chart is not null)
                         {
-                            _displayedChart = savedState.Chart;
+                            // Route through UpdateDisplayedChart (not a bare assignment) so the
+                            // scroll-to-page for MIN/HOT/LAH charts is recomputed on refresh.
+                            await UpdateDisplayedChart(savedState.Chart);
                         }
                     }
                 }
@@ -645,9 +655,18 @@
                 {
                     // URL parameter exists, set ID immediately for graphical selection
                     _airportId = AirportId.ToUpper();
-                    if (_airportId.Length == 3) _airportId = "K" + _airportId;
+                    if (_airportId.Length == 3 && _airportId.All(char.IsLetter)) _airportId = "K" + _airportId;
 
                     await UpdateCharts(_airportId);
+
+                    // Restore the previously displayed chart only if the saved session is for
+                    // this same airport, so the scroll-to-page is applied on refresh without
+                    // showing a stale chart when navigating to a different airport by URL.
+                    var savedState = await _storage.InvokeAsync<ChartState?>("get", ChartStateStorageKey);
+                    if (savedState?.Chart is not null && savedState.AirportId == _airportId)
+                    {
+                        await UpdateDisplayedChart(savedState.Chart);
+                    }
                 }
 
                 // 5. Final UI Refresh
@@ -696,13 +715,18 @@
             await SyncAutoDarkMode();
         }
 
-        _displayedChart = chart;
-        _scrollToPage = null;
-
+        // Resolve the target page BEFORE swapping in the new chart so the <object>
+        // renders once with its final URL. Otherwise it first renders without the
+        // page fragment, then the fragment-only URL change fails to reload the PDF
+        // (leaving a blank white viewer) until another chart forces a full reload.
+        int? scrollToPage = null;
         if (chart.ChartCode is "MIN" or "HOT" or "LAH")
         {
-            _scrollToPage = await ChartPdfProcessingService.FindPageContainingFaaCode(chart);
+            scrollToPage = await ChartPdfProcessingService.FindPageContainingFaaCode(chart);
         }
+
+        _scrollToPage = scrollToPage;
+        _displayedChart = chart;
 
         if (_storage is not null)
         {
@@ -734,7 +758,7 @@
             "MIN" => "border-orange-500",
             "LAH" => "border-yellow-500",
             "HOT" => "border-red-500",
-            "STAR" => "border-sky-500",
+            "STAR" or "STR" => "border-sky-500",
             "IAP" => "border-violet-500",
             "DP" => "border-pink-500",
             _ => "border-gray-600"
@@ -782,7 +806,7 @@
             "MIN" => 1,
             "LAH" => 2,
             "HOT" => 3,
-            "STAR" => 4,
+            "STAR" or "STR" => 4,
             "IAP" => 5,
             "DP" => 6,
             _ => 7
@@ -797,7 +821,7 @@
             "MIN" => "info",
             "LAH" => "info",
             "HOT" => "info",
-            "STAR" => "star",
+            "STAR" or "STR" => "star",
             "IAP" => "approach",
             "DP" => "sid",
             "ODP" => "sid",
